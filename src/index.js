@@ -1,9 +1,8 @@
 import validator from "./validator.js";
 
-//* const saludo = validator.hola();
-/* const masky = validator.maskify(); */
 
-var creditCardNumber = null;
+
+var creditCardNumber = null; 
 var newpass = null;
 
 const extraeNumero = () => {
@@ -12,23 +11,27 @@ const extraeNumero = () => {
   // etc.
   var creditCard = document.getElementById('pass');
   creditCardNumber = creditCard.value;
-  window.creditCardNumber_val = creditCardNumber;
+  creditCardNumber_val = creditCardNumber;
 };
 
 const cubreNumero = (creditCardNumber) => {
 
-  var passField = document.getElementById('pass');
   var newpass = validator.maskify(creditCardNumber);
-  passField.value = newpass;
+  var passField = document.getElementById('pass');
+  passField.type = "text";
+  document.getElementById("pass").value= newpass;
+  
+  
   
  // passField.value = validator.maskify(creditCardNumber);
 
 };
 
 var cajita = document.getElementById('pass');
+
 cajita.addEventListener("change", validator.hola);
 cajita.addEventListener("change", extraeNumero);
 cajita.addEventListener("change", () => validator.maskify(creditCardNumber));
-cajita.addEventListener("change", () => cubreNumero(creditCardNumber))
+cajita.addEventListener("change", () => cubreNumero(creditCardNumber));
 
 
