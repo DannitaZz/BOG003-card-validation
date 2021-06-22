@@ -4,34 +4,32 @@ import  validator   from "./validator.js";
 
 
 
-const masky = validator.maskify();
+/* const masky = validator.maskify(); */
 
-function extraeNumero() {
-  var passField = document.getElementById('pass');
-    passField.type = "text";
-  var input_tarjeta = document.getElementById('pass');
-  var creditCardNumber = input_tarjeta.value;
+
+/* const extraeNumero = () => {
+  
+  //var input_tarjeta = document.getElementById('pass');
+      //input_tarjeta.type = "text";
+  //var creditCardNumber = input_tarjeta.value;
+  console.log('Hola')
+  
       
 
-    return creditCardNumber
-}  
+  //return creditCardNumber
+}; */ 
 
-const extrae = extraeNumero();
+var cajita = document.getElementById('pass');
+cajita.addEventListener("change", validator.hola)
 
-function cubreNumero() {
+/* function cubreNumero() {
 
-  passField.value = newPass;
+  var passField = document.getElementById('pass');
+    passField.type = "text";
+  passField.innerHTML = newPass;
 
-}  
+}; */ 
 
-const cubre = cubreNumero();
+/* const extrae = extraeNumero(); */
+/* const cubre = cubreNumero(); */
 
-
-
-
-
-
-
-
-  
-  
