@@ -1,8 +1,8 @@
 const validator = {
   
   
-
-  /*maskify: function (creditCardNumber) {
+  
+  maskify: function (creditCardNumber) {
 
     var cardLength = creditCardNumber.length;
     var masked = creditCardNumber.substring(0, cardLength - 4);
@@ -11,7 +11,7 @@ const validator = {
     var newPass = masked + text;
     console.log(newPass)
     return newPass
-  }, */
+  },
 
   hola:  () => {
     console.log("Hola mundo");

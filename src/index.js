@@ -1,35 +1,34 @@
-import  validator   from "./validator.js";
+import validator from "./validator.js";
 
 //* const saludo = validator.hola();
-
-
-
 /* const masky = validator.maskify(); */
 
+var creditCardNumber = null;
+var newpass = null;
 
-/* const extraeNumero = () => {
-  
-  //var input_tarjeta = document.getElementById('pass');
-      //input_tarjeta.type = "text";
-  //var creditCardNumber = input_tarjeta.value;
-  console.log('Hola')
-  
-      
+const extraeNumero = () => {
+  // manipula las variables globales
+  // creditNumber
+  // etc.
+  var creditCard = document.getElementById('pass');
+  creditCardNumber = creditCard.value;
+  window.creditCardNumber_val = creditCardNumber;
+};
 
-  //return creditCardNumber
-}; */ 
-
-var cajita = document.getElementById('pass');
-cajita.addEventListener("change", validator.hola)
-
-/* function cubreNumero() {
+const cubreNumero = (creditCardNumber) => {
 
   var passField = document.getElementById('pass');
-    passField.type = "text";
-  passField.innerHTML = newPass;
+  var newpass = validator.maskify(creditCardNumber);
+  passField.value = newpass;
+  
+ // passField.value = validator.maskify(creditCardNumber);
 
-}; */ 
+};
 
-/* const extrae = extraeNumero(); */
-/* const cubre = cubreNumero(); */
+var cajita = document.getElementById('pass');
+cajita.addEventListener("change", validator.hola);
+cajita.addEventListener("change", extraeNumero);
+cajita.addEventListener("change", () => validator.maskify(creditCardNumber));
+cajita.addEventListener("change", () => cubreNumero(creditCardNumber))
+
 
