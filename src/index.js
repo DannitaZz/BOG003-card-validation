@@ -4,6 +4,8 @@ import validator from "./validator.js"; //conexión con validator.js
 
 var creditCardNumber = null; 
 var newpass = null; //null:vacío intencional
+var validacion = null;
+
 
 const extraeNumero = () => {
   // manipula las variables globales
@@ -23,6 +25,18 @@ const cubreNumero = (creditCardNumber) => {
 
 };
 
+const alertaValida = (validacion) => {
+  
+  var validacion = validator.isValid(creditCardNumber);
+
+  if (validacion == true) {
+    alert("Tarjeta validada");
+  } else  {
+    alert("Tarjeta no válida");
+  }
+}
+
+
 var cajita = document.getElementById('pass');
 
 cajita.addEventListener("change", extraeNumero);
@@ -32,6 +46,11 @@ cajita.addEventListener("change", () => cubreNumero(creditCardNumber));
 var boton = document.getElementById('boton-validar');
 
 boton.addEventListener("click", () => validator.isValid(creditCardNumber));
+boton.addEventListener("click", () => alertaValida(validacion));
+
+
+
+
 
 
 

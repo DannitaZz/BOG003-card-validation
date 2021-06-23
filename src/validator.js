@@ -2,7 +2,7 @@ const validator = {
   
   
   
-  maskify: function (creditCardNumber) {
+  maskify : (creditCardNumber) => {
 
     var cardLength = creditCardNumber.length;
     var masked = creditCardNumber.substring(0, cardLength - 4);
@@ -13,9 +13,24 @@ const validator = {
     return newPass
   },
 
-  isValid:  () => {
-    console.log("Hola mundo");
-  },
+  isValid : (creditCardNumber) => {
+  
+    let cardNumber = 0, estado = false;
+    
+  
+    for (var n = creditCardNumber.length - 1; n >= 0; n--) {
+      var cDigito = creditCardNumber.charAt(n);
+      var	nDigito = parseInt(cDigito, 10);
+  
+      if (estado && (nDigito *= 2) > 9) nDigito -= 9;
+  
+      cardNumber += nDigito;
+      estado = !estado;
+    }
+    
+    
+    return (cardNumber % 10) == 0;
+  }  
 
 
 
