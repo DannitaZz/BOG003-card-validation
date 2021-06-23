@@ -13,7 +13,7 @@ const validator = {
     return newPass
   },
 
-  hola:  () => {
+  isValid:  () => {
     console.log("Hola mundo");
   },
 
