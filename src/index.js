@@ -1,17 +1,16 @@
-import validator from "./validator.js";
+import validator from "./validator.js";//conexión con validator.js
 
 
 
-var creditCardNumber = null; 
+var creditCardNumber = null; //null:vacío intencional
 var newpass = null;
 
 const extraeNumero = () => {
   // manipula las variables globales
   // creditNumber
   // etc.
-  var creditCard = document.getElementById('pass');
-  creditCardNumber = creditCard.value;
-  creditCardNumber_val = creditCardNumber;
+  var creditCard = document.getElementById('pass');//creando variable que me trae el ID del html "pass"
+  creditCardNumber = creditCard.value;//se trae el valor de la variable creditCardNumber para extraer el numero
 };
 
 const cubreNumero = (creditCardNumber) => {
