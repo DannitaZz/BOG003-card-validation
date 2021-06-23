@@ -22,7 +22,10 @@ const validator = {
       var cDigito = creditCardNumber.charAt(n);
       var	nDigito = parseInt(cDigito, 10);
   
-      if (estado && (nDigito *= 2) > 9) nDigito -= 9;
+     
+     if (estado && (nDigito *= 2) > 9) {
+      nDigito -= 9;
+     }
   
       cardNumber += nDigito;
       estado = !estado;
