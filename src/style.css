@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comfortaa', cursive;
+  padding: 90px 20px 0;
+}
+
+.header {
+  background-color: #2c7ef4;  
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;  
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+img {
+    width: 190px;
+    height: 80 px;
+    float: left;
+    padding: 8px;
+    line-height: 80px;
+    margin-left: 20px;
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu-item{
+    font-size: 18 px;
+    margin: 0 30px;
+    line-height: 80px;
+}
