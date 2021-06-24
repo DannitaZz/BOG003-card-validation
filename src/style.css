@@ -46,4 +46,30 @@ img {
     font-size: 18 px;
     margin: 0 30px;
     line-height: 80px;
+    width: max-content;
+}
+
+.pie-pagina{
+  background-color: #B1D362;
+  position: fixed;  
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100;
+  height: 7%;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.texto-footer{
+  color: white;
+  text-align: left;
+  padding-left: 0%;
+  margin-left: 0%;
+  padding-top: 0%;
+  margin-top: 0%;
+  font-size: 10px;
+  margin-left: 20px;
+  line-height: 50px;
 }
