@@ -1,11 +1,126 @@
 import validator from "./validator.js"; //conexión con validator.js
 
+const inicio = () => {
+
+  let paginaInicio = document.getElementById("pagina-inicio");
+  let paginaProductos = document.getElementById("pagina-productos");
+  let paginaCompra = document.getElementById("pagina-compra");
+  let paginaComprobacion = document.getElementById("pagina-comprobacion");
+  let paginaValida = document.getElementById("pagina-valida");
+  let paginaNoValida = document.getElementById("pagina-no-valida");
+
+  paginaInicio.style.display = "block";
+  paginaProductos.style.display = "none";
+  paginaCompra.style.display = "none";
+  paginaComprobacion.style.display = "none";
+  paginaValida.style.display = "none";
+  paginaNoValida.style.display = "none";
+
+}
+
+
+
+const productos = () => {
+
+  let paginaInicio = document.getElementById("pagina-inicio");
+  let paginaProductos = document.getElementById("pagina-productos");
+  let paginaCompra = document.getElementById("pagina-compra");
+  let paginaComprobacion = document.getElementById("pagina-comprobacion");
+  let paginaValida = document.getElementById("pagina-valida");
+  let paginaNoValida = document.getElementById("pagina-no-valida");
+
+  paginaInicio.style.display = "none";
+  paginaProductos.style.display = "block";
+  paginaCompra.style.display = "none";
+  paginaComprobacion.style.display = "none";
+  paginaValida.style.display = "none";
+  paginaNoValida.style.display = "none";
+
+}
+
+const compra = () => {
+
+  let paginaInicio = document.getElementById("pagina-inicio");
+  let paginaProductos = document.getElementById("pagina-productos");
+  let paginaCompra = document.getElementById("pagina-compra");
+  let paginaComprobacion = document.getElementById("pagina-comprobacion");
+  let paginaValida = document.getElementById("pagina-valida");
+  let paginaNoValida = document.getElementById("pagina-no-valida");
+
+  paginaInicio.style.display = "none";
+  paginaProductos.style.display = "none";
+  paginaCompra.style.display = "block";
+  paginaComprobacion.style.display = "none";
+  paginaValida.style.display = "none";
+  paginaNoValida.style.display = "none";
+
+}
+
+const comprobacion = () => { 
+
+  let paginaInicio = document.getElementById("pagina-inicio");
+  let paginaProductos = document.getElementById("pagina-productos");
+  let paginaCompra = document.getElementById("pagina-compra");
+  let paginaComprobacion = document.getElementById("pagina-comprobacion");
+  let paginaValida = document.getElementById("pagina-valida");
+  let paginaNoValida = document.getElementById("pagina-no-valida");
+
+  paginaInicio.style.display = "none";
+  paginaProductos.style.display = "none";
+  paginaCompra.style.display = "none";
+  paginaComprobacion.style.display = "block";
+  paginaValida.style.display = "none";
+  paginaNoValida.style.display = "none";
+
+}
+
+const pValida = () => {
+
+let paginaInicio = document.getElementById("pagina-inicio");
+let paginaProductos = document.getElementById("pagina-productos");
+let paginaCompra = document.getElementById("pagina-compra");
+let paginaComprobacion = document.getElementById("pagina-comprobacion");
+let paginaValida = document.getElementById("pagina-valida");
+let paginaNoValida = document.getElementById("pagina-no-valida");
+
+  paginaInicio.style.display = "none";
+  paginaProductos.style.display = "none";
+  paginaCompra.style.display = "none";
+  paginaComprobacion.style.display = "none";
+  paginaValida.style.display = "block";
+  paginaNoValida.style.display = "none"; 
+
+}
+
+const pNoValida = () => {
+
+  let paginaInicio = document.getElementById("pagina-inicio");
+  let paginaProductos = document.getElementById("pagina-productos");
+  let paginaCompra = document.getElementById("pagina-compra");
+  let paginaComprobacion = document.getElementById("pagina-comprobacion");
+  let paginaValida = document.getElementById("pagina-valida");
+  let paginaNoValida = document.getElementById("pagina-no-valida");
+
+  paginaInicio.style.display = "none";
+  paginaProductos.style.display = "none";
+  paginaCompra.style.display = "none";
+  paginaComprobacion.style.display = "none";
+  paginaValida.style.display = "none";
+  paginaNoValida.style.display = "block";
+}
+
+inicio();
+let botonProductos = document.getElementById("boton-productos");
+botonProductos.addEventListener("click", productos);
+let botonDetalles = document.getElementById("boton-detalles");
+botonDetalles.addEventListener("click", compra);
+let botonCompra = document.getElementById("boton-compra");
+botonCompra.addEventListener("click", comprobacion);
 
 
 let creditCardNumber = ""; 
 let newpass = null; //null:vacío intencional
 let validacion = null;
-
 
 const extraeNumero = () => {
   // manipula las variables globales
@@ -34,26 +149,20 @@ const alertaValida = () => {
     console.log("Llena el campo");
   } else {
     if (validacion == true) {
-      alert("Tarjeta validada");
+      pValida();
     } else  {
-      alert("Tarjeta no válida");
+      pNoValida();
     }
-
   }
-
-
 }
-
 
 let cajita = document.getElementById('pass');
 cajita.setAttribute("required", "");
-
 cajita.addEventListener("change", extraeNumero);
 cajita.addEventListener("change", () => validator.maskify(creditCardNumber));
 cajita.addEventListener("change", cubreNumero);
 
 let boton = document.getElementById('boton-validar');
-
 boton.addEventListener("click", () => {
   console.log(creditCardNumber);
   if (creditCardNumber==="") {
@@ -66,6 +175,11 @@ boton.addEventListener("click", () => {
 
 });
 boton.addEventListener("click",  alertaValida);
+
+let botonSeguir = document.getElementById("boton-seguir");
+botonSeguir.addEventListener("click", productos);
+let botonVolver = document.getElementById("boton-volver");
+botonVolver.addEventListener("click", comprobacion);
 
 
 

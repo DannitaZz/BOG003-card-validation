@@ -33,18 +33,32 @@
     </nav>
     
     </header>
-    <main class="pagina-home">></main>
-    <main class= "pagina-productos"></main>
-    <main class= "pagina-compra"></main>
-    <main class= "pagina-validacion">
+    <main>
+    <section id="pagina-inicio">
+      <button type="button" id="boton-productos">Mira nuestros productos</button>
+
+
+    </section>
+    <section id= "pagina-productos">
+      <button type="button" id="boton-detalles">Compra</button>
+    </section>
+    <section id= "pagina-compra">
+      <button type="button" id="boton-compra">Compra</button>
+    </section>
+    <section id= "pagina-comprobacion">
       <input type="password" id="pass" maxlength="16">
       <br>
       <span id="advertencia"></span>
       <br>
       <button type="button" id='boton-validar'>Validar</button>
-    </main>
-    <main class= "pagina-validar"></main>
-    <main class= "pagina-no-valida"></main>
+    </section>
+    <section id= "pagina-valida">
+      <button type="button" id='boton-seguir'>Seguir comprando</button>
+    </section>
+    <section id= "pagina-no-valida">
+      <button type="button" id='boton-volver'>Tengo otra tarjeta</button>
+    </section>
+  </main>
     <footer class="pie-pagina"><span class="texto-footer"> © Copyright 2021 VITANI</span></footer>
     <script src="index.js" type="module"></script>
   </body>
