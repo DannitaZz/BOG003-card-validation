@@ -2,7 +2,7 @@ import validator from "./validator.js"; //conexión con validator.js
 
 
 
-var creditCardNumber = null; 
+var creditCardNumber = ""; 
 var newpass = null; //null:vacío intencional
 var validacion = null;
 
@@ -48,7 +48,16 @@ cajita.addEventListener("change", cubreNumero);
 
 var boton = document.getElementById('boton-validar');
 
-boton.addEventListener("click", () => validator.isValid(creditCardNumber));
+boton.addEventListener("click", () => {
+  console.log(creditCardNumber);
+  if (creditCardNumber==="") {
+    console.log("está vacío");  // Párrafo o span 
+  
+  } else {
+    validator.isValid(creditCardNumber)
+  }
+
+});
 boton.addEventListener("click",  alertaValida);
 
 
