@@ -12,20 +12,22 @@ const extraeNumero = () => {
   // creditNumber
   // etc.
   var creditCard = document.getElementById('pass'); //creando variable que me trae el ID del html "pass"
+  
   creditCardNumber = creditCard.value; //se trae el valor de la variable creditCardNumber para extraer el numero
   
 };
 
-const cubreNumero = (creditCardNumber) => {
+const cubreNumero = () => {
 
   var newpass = validator.maskify(creditCardNumber);
   var passField = document.getElementById('pass');
+  
   passField.type = "text";
   document.getElementById("pass").value= newpass;
 
 };
 
-const alertaValida = (validacion) => {
+const alertaValida = () => {
   
   var validacion = validator.isValid(creditCardNumber);
 
@@ -38,15 +40,16 @@ const alertaValida = (validacion) => {
 
 
 var cajita = document.getElementById('pass');
+cajita.setAttribute("required", "");
 
 cajita.addEventListener("change", extraeNumero);
 cajita.addEventListener("change", () => validator.maskify(creditCardNumber));
-cajita.addEventListener("change", () => cubreNumero(creditCardNumber));
+cajita.addEventListener("change", cubreNumero);
 
 var boton = document.getElementById('boton-validar');
 
 boton.addEventListener("click", () => validator.isValid(creditCardNumber));
-boton.addEventListener("click", () => alertaValida(validacion));
+boton.addEventListener("click",  alertaValida);
 
 
 
