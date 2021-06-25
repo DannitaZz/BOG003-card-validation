@@ -2,7 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>vitani</title>
+    <meta name="viewport" content="width=device-width">
+    <title>VITANI</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +26,7 @@
           </li>
           <li class="nav-menu-item">
           <input type="text" class="search_text nav-link" placeholder="Buscar">
-          <a herf="" class="boton nav-link"></a>
+          <a herf="" class="boton-nav-link"></a>
           <i class="icon-buscar nav-link"></i></li>
           <li class="nav-menu-item nav-link">
           <button type="button" onclick="alert('¡Muy pronto tendremos envíos disponibles!')">Envíos</button></li>
@@ -35,28 +36,76 @@
     </header>
     <main>
     <section id="pagina-inicio">
-      <button type="button" id="boton-productos">Mira nuestros productos</button>
-
-
+      <img id="gato-raza" class="fotos"
+      src="gato-raza.jpeg">
+      <img id="perro-criollo" class="fotos"
+      src="perro-criollo.jpg">
+      <img id="perro-beagle" class="fotos"
+      src="perro-beagle.jpg">
+      <br>
+      
+      <div id="texto-principal">
+        <h2 id="bienvenida" class="row-1">BIENVENIDO A VITANI <br> Tienda en línea</h2>
+        <br>
+        <button type="button" class="boton" id="boton-productos">Mira nuestros productos</button>
+      </div>
+      <br>
+      <img id="gato-tuxedo" class="fotos"
+      src="gato-tuxedo.jpg">
+      <img id="gato-criollo" class="fotos"
+      src="gato-criollo.png">
+      <img id="perro-raza" class ="fotos"
+      src="perro-raza.jpg">
     </section>
     <section id= "pagina-productos">
-      <button type="button" id="boton-detalles">Compra</button>
+      <button type="button" class="boton" id="boton-detalles">Compra</button>
     </section>
     <section id= "pagina-compra">
-      <button type="button" id="boton-compra">Compra</button>
+      <button type="button" class="boton" id="boton-compra">Compra</button>
     </section>
     <section id= "pagina-comprobacion">
-      <input type="password" id="pass" maxlength="16">
-      <br>
-      <span id="advertencia"></span>
-      <br>
-      <button type="button" id='boton-validar'>Validar</button>
+      <section class="naranja">
+        <img id="tarjetas"
+        src="tarjeta-no-fondo.png">
+        <br>
+        <h2 id="ingrese-tarjeta">Para proceder con la compra, por favor ingrese el número de su tarjeta de crédito</h2>
+        <br>
+        <div id="numero-input">
+          <h1 id="numero">Número</h1>
+          <input type="password" id="pass" maxlength="16">
+          <br>
+          <span id="advertencia"></span>
+        </div>
+        <br>
+        <br>
+        <button type="button" class="boton" id='boton-validar'>Validar</button>
+      </section>
     </section>
     <section id= "pagina-valida">
-      <button type="button" id='boton-seguir'>Seguir comprando</button>
+      <section class="naranja">
+        <div class="confirmacion">
+          <h2 class="row-1">Su tarjeta ha sido validada</h2>
+          <br>
+          <img src="perro-feliz.jpg"class="img-final">
+          <br>
+          <h1 class="row-3">¡Puedes seguir disfrutando de nuestros servicios!</h1>
+          <br>
+          <button type="button" class="boton" id='boton-seguir'>Seguir comprando</button>
+        </div>
+      </section>
     </section>
     <section id= "pagina-no-valida">
-      <button type="button" id='boton-volver'>Tengo otra tarjeta</button>
+      <section class="naranja">
+        <div class="confirmacion">
+          <h2 class="row-1">Su tarjeta no es válida</h2>
+          <br>
+          <img src="gato-triste.jpg" class="img-final">
+          <br>
+          <h1 class="row-3">¡Por favor ingresa otra tarjeta!</h1>
+          <br>
+          <button type="button" class="boton" id='boton-volver'>Tengo otra tarjeta</button>
+        </div>
+      </section>
     </section>
   </main>
     <footer class="pie-pagina"><span class="texto-footer"> © Copyright 2021 VITANI</span></footer>
