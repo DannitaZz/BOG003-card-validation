@@ -261,3 +261,7 @@ img {
   /* box-shadow: 0 0 0 2pt #FFD101; */
   color: #316fe4;
 } 
+
+@media (min-width: 980px) {
+ 
+}

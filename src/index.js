@@ -15,10 +15,7 @@ const inicio = () => {
   paginaComprobacion.style.display = "none";
   paginaValida.style.display = "none";
   paginaNoValida.style.display = "none";
-
 }
-
-
 
 const productos = () => {
 
@@ -35,7 +32,6 @@ const productos = () => {
   paginaComprobacion.style.display = "none";
   paginaValida.style.display = "none";
   paginaNoValida.style.display = "none";
-
 }
 
 const compra = () => {
@@ -53,7 +49,6 @@ const compra = () => {
   paginaComprobacion.style.display = "none";
   paginaValida.style.display = "none";
   paginaNoValida.style.display = "none";
-
 }
 
 const comprobacion = () => { 
@@ -71,17 +66,16 @@ const comprobacion = () => {
   paginaComprobacion.style.display = "block";
   paginaValida.style.display = "none";
   paginaNoValida.style.display = "none";
-
 }
 
 const pValida = () => {
 
-let paginaInicio = document.getElementById("pagina-inicio");
-let paginaProductos = document.getElementById("pagina-productos");
-let paginaCompra = document.getElementById("pagina-compra");
-let paginaComprobacion = document.getElementById("pagina-comprobacion");
-let paginaValida = document.getElementById("pagina-valida");
-let paginaNoValida = document.getElementById("pagina-no-valida");
+  let paginaInicio = document.getElementById("pagina-inicio");
+  let paginaProductos = document.getElementById("pagina-productos");
+  let paginaCompra = document.getElementById("pagina-compra");
+  let paginaComprobacion = document.getElementById("pagina-comprobacion");
+  let paginaValida = document.getElementById("pagina-valida");
+  let paginaNoValida = document.getElementById("pagina-no-valida");
 
   paginaInicio.style.display = "none";
   paginaProductos.style.display = "none";
@@ -89,7 +83,6 @@ let paginaNoValida = document.getElementById("pagina-no-valida");
   paginaComprobacion.style.display = "none";
   paginaValida.style.display = "block";
   paginaNoValida.style.display = "none"; 
-
 }
 
 const pNoValida = () => {
@@ -108,19 +101,6 @@ const pNoValida = () => {
   paginaValida.style.display = "none";
   paginaNoValida.style.display = "block";
 }
-
-inicio();
-let botonProductos = document.getElementById("boton-productos");
-botonProductos.addEventListener("click", productos);
-let botonDetalles = document.getElementById("boton-detalles");
-botonDetalles.addEventListener("click", compra);
-let botonCompra = document.getElementById("boton-compra");
-botonCompra.addEventListener("click", comprobacion);
-
-
-let creditCardNumber = ""; 
-let newpass = null; //null:vacío intencional
-let validacion = null;
 
 const extraeNumero = () => {
   // manipula las variables globales
@@ -146,7 +126,7 @@ const alertaValida = () => {
 
   let validacion = validator.isValid(creditCardNumber);
   if (creditCardNumber==="") {
-    console.log("Llena el campo");
+    alert("Llena el campo");
   } else {
     if (validacion == true) {
       pValida();
@@ -156,6 +136,20 @@ const alertaValida = () => {
   }
 }
 
+inicio();
+let botonProductos = document.getElementById("boton-productos");
+botonProductos.addEventListener("click", productos);
+let botonDetalles = document.getElementById("boton-detalles");
+botonDetalles.addEventListener("click", compra);
+let botonCompra = document.getElementById("boton-compra");
+botonCompra.addEventListener("click", comprobacion);
+
+
+let creditCardNumber = ""; 
+
+
+
+
 let cajita = document.getElementById('pass');
 cajita.setAttribute("required", "");
 cajita.addEventListener("change", extraeNumero);
@@ -164,7 +158,7 @@ cajita.addEventListener("change", cubreNumero);
 
 let boton = document.getElementById('boton-validar');
 boton.addEventListener("click", () => {
-  console.log(creditCardNumber);
+  
   if (creditCardNumber==="") {
     document.getElementById("advertencia").innerHTML="*Este campo es obligatorio";  // Párrafo o span
     

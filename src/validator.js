@@ -9,7 +9,7 @@ const validator = {
     masked = masked.replace(/./g, '#'); //The character is ASCII-7 (Press Alt+7 to type)
     let text = creditCardNumber.substring(cardLength - 4);
     let newPass = masked + text;
-    console.log(newPass)
+    
     return newPass
   },
 
