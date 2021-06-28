@@ -78,27 +78,63 @@ line-height: 50px;
 }
 
 #pagina-inicio{
-background-size: cover; 
-background-position: center;
-align-items: center;
-overflow: hidden;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-padding-left: 20%;
-padding-right: 20%;
+  display: grid;
+  grid-template-rows: 400px 200px 400px;
+  grid-template-columns: 400px 200px 400px;
+  align-items: center;
+
+
+  padding-left: 10%;
+  padding-right: 20%;
+  margin-bottom: 0px;
 }
 
 
 .fotos{
-width: 356px;
-height: 300px;
-float: center;
-margin : 5px;
-border-radius: 25px;
-padding-top: 2px;
-margin-top: 1px;
+  width: 310px;
+  height: 190px;
+  float: center;
+  margin : 4px;
+  border-radius: 25px;
+  padding-top: 2px;
+  margin-top: 1px;
+  
+}
+
+#gato-raza{
+  grid-column:1;
+  grid-row: 1;
+}
+
+#perro-criollo{
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#perro-beagle{
+  grid-column: 3;
+  grid-row: 1;
+}
+
+#gato-tuxedo{
+  grid-column: 1;
+  grid-row: 3;
+}
+
+#gato-criollo{
+  grid-column: 2;
+  grid-row: 3;
+}
+
+#perro-raza{
+  grid-column: 3;
+  grid-row: 3;
+}
+
+#texto-principal{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row: 2;
 }
 
 #texto-principal{
@@ -110,7 +146,7 @@ border: 1px  black;
 border-radius: 25px; 
 overflow: hidden;
 
-width: 1100px;
+width: 950px;
 height: 120px;
 left: 0;
 right: 0;
@@ -169,20 +205,23 @@ justify-content: center;
 border: 1px  black;
 border-radius: 12px; 
 overflow: hidden;
-padding: 16px 16px;
-width: 75%;
+padding: 16px 20px;
+
+width: 80%;
 
 }
 
 .confirmacion{
 display: grid;
 place-items: center;
-grid-row-gap: 20px;
+grid-row-gap: 10px;
 }
 #numero-input{
 display:grid;
-grid-template-columns: 300px 300px;
-grid-column-gap: 5px;
+align-items: center;
+
+grid-row-gap: 10px;
+
 }
 
 #ingrese-tarjeta{
@@ -192,17 +231,21 @@ padding-bottom: 2%;
 }
 
 #numero{
-grid-column: 1;
+grid-row: 1;
 align-items: center;
 text-align: center;
 float: inline-start;
+grid-column-end:auto;
+padding-right: 200px;
 padding-left: 200px;
 }
 
 #pass{
-grid-column: 2;
+grid-row: 2;
 box-sizing: border-box;
-padding-right: 150px;
+width: 300px;
+margin-left: 150px;
+
 }
 
 .img-final{
@@ -292,7 +335,6 @@ background-color: #FFC466;
 }
 
 .boton:hover{
-<<<<<<< HEAD
 box-shadow: 0 0 0 2pt #f2e2c1;
 /* box-shadow: 0 0 0 2pt #FFD101; */
 color: #316fe4;
@@ -419,13 +461,4 @@ color: #316fe4;
 }
 .precio-numeros {
   font-size: 30px;
-=======
-  box-shadow: 0 0 0 2pt #f2e2c1;
-  /* box-shadow: 0 0 0 2pt #FFD101; */
-  color: #316fe4;
-} 
-
-@media (min-width: 980px) {
- 
->>>>>>> 4989b8b883c5a97e2e65ceaf996fa2b96b87c8b4
 }
