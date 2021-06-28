@@ -292,6 +292,7 @@ background-color: #FFC466;
 }
 
 .boton:hover{
+<<<<<<< HEAD
 box-shadow: 0 0 0 2pt #f2e2c1;
 /* box-shadow: 0 0 0 2pt #FFD101; */
 color: #316fe4;
@@ -418,4 +419,13 @@ color: #316fe4;
 }
 .precio-numeros {
   font-size: 30px;
+=======
+  box-shadow: 0 0 0 2pt #f2e2c1;
+  /* box-shadow: 0 0 0 2pt #FFD101; */
+  color: #316fe4;
+} 
+
+@media (min-width: 980px) {
+ 
+>>>>>>> 4989b8b883c5a97e2e65ceaf996fa2b96b87c8b4
 }
