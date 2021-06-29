@@ -6,7 +6,7 @@
 
 ![](https://i.imgur.com/R81REIK.png)
 
-</center>center>
+</center>
 
 
 ### Autoría 
