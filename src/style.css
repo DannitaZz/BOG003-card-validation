@@ -84,8 +84,8 @@ line-height: 50px;
   align-items: center;
 
 
-  padding-left: 10%;
-  padding-right: 20%;
+  padding-left: 11%;
+  padding-right: 19%;
   margin-bottom: 0px;
 }
 
@@ -253,7 +253,8 @@ grid-row:2;
 width: 500px; 
 height: 400px;
 border: #307BE8 5px;
-border-radius: 15px;
+border-radius: 25px;
+padding-top: 20px;
 }
 .row-1{
 grid-row: 1;
@@ -262,6 +263,8 @@ color: #307BE8;
 .row-3{
 grid-row: 3;
 color: white;
+padding-top: 20px;
+padding-bottom: 20px;
 }
 
 #boton-seguir, #boton-volver{
