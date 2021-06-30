@@ -146,12 +146,12 @@ const cubreNumero = () => {
 
 const alertaValida = () => {
 
-  /*Esta funcion nos trae el boolean que retorna isValid, después verifica que el campo este lleno y luego por medio de 
+  /*Esta funcion nos trae el boolean que retorna isValid, después verifica que el campo este lleno y si contiene caracteres no numéricos y luego por medio de 
   un condicional me lleva a pagina valida si es true o pagina no valida si es false */
 
   let validacion = validator.isValid(creditCardNumber);
-  if (creditCardNumber==="") {
-    alert("Llena el campo");
+  if (creditCardNumber==="" || /^[^0-9]*$/.test(creditCardNumber)) {  
+    alert("Llena el campo con solo dígitos");
   } else {
     if (validacion == true) {
       pValida();
