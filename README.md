@@ -1,13 +1,12 @@
----
-title: 'ReadMe'
-disqus: hackmd
----
+
+
+
 
 <center>
 
 ![](https://i.imgur.com/R81REIK.png)
 
-</center>center>
+</center>
 
 
 ### Autoría 
